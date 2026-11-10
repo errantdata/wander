@@ -14,7 +14,7 @@ walker and the people; Wander tells it where everyone is and where to go.
 ## Install
 
 ```sh
-npm install github:errantdata/wander#v0.1.1
+npm install github:errantdata/wander#v0.1.2
 ```
 
 The compiled JavaScript and type declarations are committed in `dist/`, so installing runs no
@@ -104,7 +104,7 @@ const legs = house(rooms).journey(now, { room: 'hall', at: tapped! }, 'ben');
 npm install
 npm run check   # types
 npm test        # node:test, straight from the TypeScript source
-npm run build   # dist/, committed; `check` fails if it is stale
+npm run compile # dist/, committed; `check` fails if it is stale
 ```
 
 ## Licence

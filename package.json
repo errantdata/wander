@@ -1,6 +1,6 @@
 {
   "name": "@errantdata/wander",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Walk a painted house room by room: perspective floors, routes through doors, and what a story board offers.",
   "license": "MIT",
   "author": "Sean Cantrell",
@@ -28,8 +28,8 @@
     "node": ">=22.18"
   },
   "scripts": {
-    "build": "tsc -p tsconfig.build.json && prettier --write --log-level warn dist",
-    "check": "tsc --noEmit && npm run build && git diff --exit-code -- dist",
+    "compile": "tsc -p tsconfig.build.json && prettier --write --log-level warn dist",
+    "check": "tsc --noEmit && npm run compile && git diff --exit-code -- dist",
     "test": "node --test \"src/**/*.test.ts\"",
     "prepublishOnly": "npm run check && npm test"
   },
