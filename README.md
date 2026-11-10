@@ -14,11 +14,11 @@ walker and the people; Wander tells it where everyone is and where to go.
 ## Install
 
 ```sh
-npm install github:errantdata/wander#v0.1.0
+npm install github:errantdata/wander#v0.1.1
 ```
 
-The package builds itself on install (`prepare`), so it ships compiled JavaScript and type
-declarations. It needs Node 22.18 or later to develop and test; any modern bundler can consume it.
+The compiled JavaScript and type declarations are committed in `dist/`, so installing runs no
+scripts. It needs Node 22.18 or later to develop and test; any modern bundler can consume it.
 
 ## Concepts
 
@@ -104,7 +104,7 @@ const legs = house(rooms).journey(now, { room: 'hall', at: tapped! }, 'ben');
 npm install
 npm run check   # types
 npm test        # node:test, straight from the TypeScript source
-npm run build   # dist/
+npm run build   # dist/, committed; `check` fails if it is stale
 ```
 
 ## Licence
